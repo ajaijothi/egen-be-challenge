@@ -26,9 +26,9 @@
                 controller: 'AddUserCtrl',
                 controllerAs:'$ctrl'
             })
-            .state('user.edit', {
-                url: '/edit/:id',
-                templateUrl: 'app/users/views/user-edit.html'
+            .state('user.detail', {
+                url: '/detail/:id',
+                templateUrl: 'app/users/views/user-detail.html'
             })
             .state('user.delete', {
                 url: '/delete/:id',

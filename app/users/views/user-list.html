@@ -20,7 +20,7 @@
         <tbody>
             <tr ng-repeat="user in $ctrl.Users">
                 <td><img class="thumbnail" ng-src="{{user.profilePic}}" alt=""></td>
-                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td><a ui-sref="user.detail({id:user.id})"{{user.firstName}} {{user.lastName}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.address.city}}</td>
                 <td><a ng-href="{{user.company.website}}">{{user.company.name}}</a></td>
