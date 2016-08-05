@@ -1,0 +1,30 @@
+<div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Users</h2>
+        </div>
+        <div class="col-sm-6 text-right">
+            <a ui-sref="user.add" class="btn"><i class="fa fa-plus"></i> Add User</a>
+        </div>
+    </div>
+    <table class="table table-stripped grid">
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in $ctrl.Users">
+                <td><img class="thumbnail" ng-src="{{user.profilePic}}" alt=""></td>
+                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address.city}}</td>
+                <td><a ng-href="{{user.company.website}}">{{user.company.name}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

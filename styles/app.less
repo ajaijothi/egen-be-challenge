@@ -1,0 +1,103 @@
+@import "/bower_components/bootstrap/less/bootstrap.less";
+//@import "bower_components/bootstrap/less/theme.less";
+@import "/bower_components/font-awesome/less/font-awesome.less";
+@fa-font-path: "/bower_components/font-awesome/fonts";
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+/* Required for Angular UI Bootstrap */
+
+@orange: #ff6600;
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+
+
+/* Personal preference for BS modal.  The LESS below makes the backdrop white and
+   causes the modal to fade in rather than slide in. */
+
+//@modal-backdrop-bg: white;
+//.modal {
+//	&.fade {
+//		.transition(opacity .3s);
+//	}
+//	&.fade .modal-dialog {
+//		.translate(0,0);
+//	}
+//}
+header {
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: #999 0 0 5px;
+    margin-bottom: 10px;
+    .logo {
+        margin: 0;
+        padding: 0;
+        img {
+            height: 50px;
+            width: auto;
+        }
+    }
+}
+
+body {
+    background: #eee;
+    font-family: Lato;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+img.thumbnail {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-color: @orange;
+    border-width: 2px;
+    border-radius: 100%;
+    margin: 0;
+}
+
+.grid {
+    box-shadow: #999 1px 1px 5px;
+    background: #fff;
+    th {
+        color: @orange;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+    td {
+        vertical-align: middle !important;
+    }
+    td,
+    th,
+    tr {
+        border-color: @orange !important;
+    }
+}
+
+.btn {
+    background: none;
+    border: 1px solid @orange;
+    color: @orange;
+    margin: 5px;
+    &.btn-primary {
+        background: @orange;
+        color: white;
+    }
+}
+
+label {
+    color: @orange
+}
+
+.form-group.has-error {
+    input {
+        border-color: red;
+        background: #ffe7e7;
+        box-shadow: #ff7878 0 0 5px;
+    }
+}
