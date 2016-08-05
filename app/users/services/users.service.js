@@ -1,8 +1,12 @@
 (function(){
     'use strict';
     
-    angular.module('app.service')
-    .factory('User', function($resource){
+    function User($resource){
         return $resource('http://mocker.egen.io/users/:id');
-    })
+    }
+    
+    User.$inject = ['$resource'];
+    
+    angular.module('app.service')
+    .factory('User', User);
 })();

@@ -2,13 +2,7 @@
     'use strict';
 
     function appRouting($stateProvider, $urlRouterProvider) {
-        $stateProvider
-            .state('home', {
-                url: '/',
-                template: '<ui-view/>'
-            });
-        
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/user/list');
     }
     
     appRouting.$inject = ['$stateProvider', '$urlRouterProvider'];

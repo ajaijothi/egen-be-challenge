@@ -8,6 +8,6 @@
     UserListCtrl.$inject = ['Users'];
 
     angular.module('app')
-        .controller('UserListCtrl', UserListCtrl)
+        .controller('UserListCtrl', UserListCtrl);
 
 })();

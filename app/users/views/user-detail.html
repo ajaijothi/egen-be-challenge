@@ -8,7 +8,21 @@
         </div>
     </div>
     <br>
-    <div>
-        
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="">Name</label>
+            <div>{{$ctrl.User.firstName}} {{$ctrl.User.lastName}}</div>
+            <label for="">Email</label>
+            <div>{{$ctrl.User.email}}</div>
+            <label for="">Address</label>
+            <div>{{$ctrl.User.address.street}},<br> {{$ctrl.User.address.city}}, {{$ctrl.User.address.state}} - {{$ctrl.User.address.zip}} <br>{{$ctrl.User.address.country}}</div>
+            <label for="">Company</label>
+            <div><a ng-href="{{$ctrl.User.company.website}}" target="_blank"></a>{{$ctrl.User.company.name}}</div>
+            <br>
+            <button ui-sref="user.delete({id:$ctrl.User.id})" class="btn btn-primary"><i class="fa fa-trash"></i> Delete</button>
+        </div>
+        <div class="col-sm-6">
+            <img ng-src="{{$ctrl.User.profilePic}}" class="img-responsive" alt="" ng-if="$ctrl.User.profilePic">
+        </div>
     </div>
 </div>

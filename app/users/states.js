@@ -28,11 +28,23 @@
             })
             .state('user.detail', {
                 url: '/detail/:id',
-                templateUrl: 'app/users/views/user-detail.html'
+                templateUrl: 'app/users/views/user-detail.html',
+                controller: 'UserDetailCtrl',
+                controllerAs:'$ctrl',
+                resolve: {
+                    UserInfo: function(User, $stateParams){
+                        return User.get({id: $stateParams.id});
+                    }
+                }
             })
             .state('user.delete', {
                 url: '/delete/:id',
-                templateUrl: 'app/users/views/user-delete.html'
+                onEnter: function(User, $stateParams, $state){
+                    if(confirm('Are you sure want to delete?')){
+                        User.delete({id:$stateParams.id})
+                        $state.go('user.list');
+                    }
+                }
             });
 
     }

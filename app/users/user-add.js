@@ -11,12 +11,12 @@
                     $state.go('user.list');
                 });
             }
-        }
+        };
     }
 
     AddUserCtrl.$inject = ['User', '$state'];
 
     angular.module('app')
-        .controller('AddUserCtrl', AddUserCtrl)
+        .controller('AddUserCtrl', AddUserCtrl);
 
 })();
